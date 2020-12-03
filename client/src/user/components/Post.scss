@@ -1,0 +1,30 @@
+@import "../../core/css/Variables";
+.post {
+  overflow: hidden;
+  margin-bottom: $margin-large;
+
+  &_image {
+    height: 380px;
+    width: 100%;
+    overflow: hidden;
+  }
+  // &_title {
+  // }
+  &_user {
+    display: flex;
+    align-items: center;
+    &--avatar {
+      width: 64px;
+      height: 64px;
+      border-radius: 100%;
+      margin-bottom: 0;
+      margin-right: $margin-small;
+    }
+    &--name {
+      margin-bottom: 0;
+    }
+    &--time {
+      margin-bottom: 0;
+    }
+  }
+}

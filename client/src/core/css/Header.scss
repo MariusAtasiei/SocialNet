@@ -1,0 +1,117 @@
+@import "Variables";
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+
+  a {
+    color: $black-color;
+    text-decoration: none;
+  }
+
+  &_logo {
+    font-size: 20px;
+    font-weight: 900;
+  }
+
+  &_searchform {
+    border: 1px solid;
+    border-color: $white-color;
+    border-bottom-color: $grey-color-deep;
+    padding: 5px;
+    transition: border-color 0.3s ease-out;
+    &:focus-within {
+      transition: border-color 0.3s ease-in;
+      border-color: $grey-color-deep;
+    }
+    input {
+      border: 0;
+      &:focus-within,
+      &:focus {
+        border: 0;
+        outline: 0;
+      }
+    }
+    &--button {
+      background: transparent;
+      border: 0;
+      &:focus,
+      &:focus-within {
+        outline: 0;
+        border: 0;
+      }
+    }
+  }
+  &_addnew {
+    margin-left: $margin-small;
+  }
+  &_addnew,
+  &_home {
+    i {
+      font-size: 20px;
+      color: #333;
+    }
+  }
+  a.header_signin {
+    margin-left: $margin-small;
+  }
+  a.header_signup {
+    background: $black-color;
+    color: $white-color;
+    padding: 10px 20px;
+    border-radius: 40px;
+    margin-left: $margin-small;
+  }
+
+  &_menu {
+    display: flex;
+    align-items: center;
+    .header_user {
+      margin-left: $margin-small;
+      &--dropdown {
+        display: flex;
+        align-items: center;
+        background: transparent;
+        padding: 0;
+        border: 0;
+        color: $black-color-light;
+        i {
+          font-size: 20px;
+        }
+        &:after {
+          display: none;
+        }
+      }
+      &--avatar {
+        display: inline-block;
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+      }
+      &--username {
+        color: $black-color-light;
+        padding: 0 10px;
+        margin-bottom: 0;
+      }
+    }
+    .dropdown-menu {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      min-width: 0;
+      right: 0;
+    }
+    .nav_dropdown {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      background: $white-color;
+      padding: 10px;
+      width: 100%;
+      box-shadow: 0px 2px 3px $grey-color;
+    }
+  }
+}

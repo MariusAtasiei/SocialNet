@@ -1,0 +1,13 @@
+@import "../../core/css/Variables";
+
+.user {
+  &_details {
+    display: flex;
+    &--info {
+      .user_avatar {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+}
